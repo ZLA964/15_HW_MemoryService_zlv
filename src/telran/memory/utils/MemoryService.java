@@ -11,16 +11,16 @@ public class MemoryService {
         while (true) {
             count++;
             testMaxIndex = (maxIndex2 / 2) + (maxIndex1 / 2);
- //           if (((maxIndex2 == testMaxIndex && testMaxIndex == maxIndex1) || (maxIndex2 - maxIndex1) == 1)) break;
+//            if (((maxIndex2 == testMaxIndex && testMaxIndex == maxIndex1) || (maxIndex2 - maxIndex1) == 1)) break;
+            if ((maxIndex2 - maxIndex1) == 1) break;
             try {
                 int[] arr = new int[testMaxIndex];
-                if ((maxIndex2 - maxIndex1) == 1) break;
             } catch (Error e) {
                 maxIndex2 = testMaxIndex;
-           continue;
+//           continue;
             }
-//            maxIndex1 = (maxIndex2 / 2) + (maxIndex1 / 2);
-          maxIndex1 = testMaxIndex;
+            maxIndex1 = (maxIndex2 / 2) + (maxIndex1 / 2);
+//          maxIndex1 = testMaxIndex;
         }
         System.out.println("step: " + (count - 1) + ". Find MaxAvailableMemory: " + testMaxIndex);
         return testMaxIndex;
