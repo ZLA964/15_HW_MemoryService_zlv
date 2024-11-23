@@ -8,29 +8,17 @@ public class MemoryService {
         int maxIndex2 = Integer.MAX_VALUE;
         int testMaxIndex = maxIndex2;
 
-  while ( (maxIndex2 - maxIndex1) > 1)
- //   do
-        {
-            System.out.println(count);
+        while ((maxIndex2 - maxIndex1) > 1) {
             count++;
-
             testMaxIndex = (maxIndex2 / 2) + (maxIndex1 / 2);
- //           if ((maxIndex2 - maxIndex1) == 1) break;
-//            if (((maxIndex2 == testMaxIndex && testMaxIndex == maxIndex1) || (maxIndex2 - maxIndex1) == 1)) break;
- //          if ((maxIndex2 - maxIndex1) == 1) break;
-            try {
+             try {
                 int[] arr = new int[testMaxIndex];
             } catch (Error e) {
                 maxIndex2 = testMaxIndex;
-//           continue;
             }
             maxIndex1 = (maxIndex2 / 2) + (maxIndex1 / 2);
-//          maxIndex1 = testMaxIndex;
         }
- //       while ((maxIndex2 - maxIndex1) != 1);
-        System.out.println(testMaxIndex);
-        testMaxIndex = testMaxIndex-1;
- //       testMaxIndex = (maxIndex2 / 2) + (maxIndex1 / 2);
+        testMaxIndex = testMaxIndex - 1;
         System.out.println("step: " + (count - 1) + ". Find MaxAvailableMemory: " + testMaxIndex);
         return testMaxIndex;
     }
